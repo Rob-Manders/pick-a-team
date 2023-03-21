@@ -18,7 +18,7 @@ interface Value {
 export const AppContext = createContext<Value | undefined>(undefined)
 
 export default function AppContextProvider({ children }: Props) {
-  const [teamsAvailable, setTeamsAvailable] = useState<Team[]>(teams)
+  const [teamsAvailable, setTeamsAvailable] = useState<Team[]>([...teams])
   const [teamsGone, setTeamsGone] = useState<Team[]>([])
   const [selectedTeam, setSelectedTeam] = useState<Team | undefined>(undefined)
   const [madeFirstSelection, setMadeFirstSelection] = useState<boolean>(false)
@@ -26,26 +26,26 @@ export default function AppContextProvider({ children }: Props) {
   function pickTeam() {
     if (teamsAvailable.length > 0) {
       const teamIndex = Math.floor(Math.random() * teamsAvailable.length)
-      const selectedTeam = teams[teamIndex]
-
-      setSelectedTeam(selectedTeam)
+      const thisSelection = teamsAvailable[teamIndex]
 
       if (madeFirstSelection) {
-        setTeamsGone(prevState => {
-          return [selectedTeam, ...prevState]
-        })
-
+        setTeamsGone(prevState => [selectedTeam, ...prevState])
+      } else {
         setMadeFirstSelection(true)
       }
 
+      setSelectedTeam(thisSelection)
+
       setTeamsAvailable(prevState => {
-        return prevState.splice(teamIndex, 1)
+        const teamsRemaining = prevState
+        teamsRemaining.splice(teamIndex, 1)
+        return teamsRemaining
       })
     }
   }
 
   function reset() {
-    setTeamsAvailable(teams)
+    setTeamsAvailable([...teams])
     setTeamsGone([])
     setSelectedTeam(undefined)
     setMadeFirstSelection(false)
