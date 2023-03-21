@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { AppContext } from '../context/AppContext'
 
 const Button = styled.button`
+  outline: none;
   display: block;
   font-size: 1.75rem;
   font-weight: 700;

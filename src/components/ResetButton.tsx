@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import { AppContext } from '../context/AppContext'
 
 const Button = styled.button`
+  outline: none;
   border: none;
   background: none;
   cursor: pointer;
 
   svg {
-    fill: #727272;
+    fill: #afafaf;
     transition: fill 250ms ease-in-out;
   }
 
