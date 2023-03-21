@@ -2,7 +2,23 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { AppContext } from '../context/AppContext'
 
-const Button = styled.button``
+const Button = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    fill: #727272;
+    transition: fill 250ms ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: #54ade9;
+    }
+  }
+`
 
 export default function ResetButton() {
   const { reset } = useContext(AppContext)

@@ -6,6 +6,9 @@ import TeamGone from './TeamGone'
 
 const Container = styled.div`
   display: flex;
+  height: 80px;
+  margin: 1.5rem 0;
+  justify-content: center;
 `
 
 export default function TeamsGone() {

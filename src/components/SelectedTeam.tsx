@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext'
 
 const Container = styled.div`
   --dimensions: 500px;
-  --padding: 0.5rem;
+  --padding: 1.25rem;
   --image-dimensions: calc(var(--dimensions) - calc(var(--padding) * 2));
 
   background-color: #fff;
@@ -16,8 +16,8 @@ const Container = styled.div`
   padding: var(--padding);
 
   img {
-    max-width: calc(var(--dimensions) - 1rem);
-    max-height: calc(var(--dimensions) - 1rem);
+    max-width: var(--image-dimensions);
+    max-height: var(--image-dimensions);
   }
 `
 

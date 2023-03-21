@@ -12,6 +12,13 @@ const Button = styled.button`
   padding: 1.75rem;
   border-radius: 15px;
   margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: #f5c160;
+  }
 `
 
 export default function PickTeamButton() {
