@@ -4,10 +4,6 @@ import React from 'react'
 import App from './App'
 import AppContextProvider from './context/AppContext'
 
-const title = 'React Typescript Template'
-
-document.title = title
-
 const container = document.createElement('div')
 container.classList.add('app')
 
