@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { AppContext } from '../context/AppContext'
 
 const Container = styled.div`
-  --dimensions: 500px;
+  --dimensions: 100%;
   --padding: 1.25rem;
   --image-dimensions: calc(var(--dimensions) - calc(var(--padding) * 2));
 
