@@ -10,9 +10,9 @@ export default function App() {
     <main>
       <div className='header-container'>
         <Counter />
-        <TeamsGone />
         <ResetButton />
       </div>
+      <TeamsGone />
       <SelectedTeam />
       <PickTeamButton />
     </main>

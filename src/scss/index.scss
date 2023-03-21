@@ -13,8 +13,23 @@ body {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f3f3f3;
   font-family: 'IBM Plex Sans', sans-serif;
   color: rgb(25, 24, 31);
   text-align: center;
+}
+
+main {
+  max-width: 500px;
+  margin: 0.5rem;
+
+  @media screen and (min-width: 550px) {
+    margin: 1rem auto;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -4,7 +4,9 @@ import { AppContext } from '../context/AppContext'
 import { Team } from '../interfaces'
 import TeamGone from './TeamGone'
 
-const Container = styled.div``
+const Container = styled.div`
+  display: flex;
+`
 
 export default function TeamsGone() {
   const { teamsGone } = useContext(AppContext)
